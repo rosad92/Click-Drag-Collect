@@ -216,8 +216,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b378498469c7044e9df12c75ffb7554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 3784189850603971013, guid: 62048230a84af8f428efc1107d4edd72,
+  rCubePrefab: {fileID: 3784189850603971013, guid: 62048230a84af8f428efc1107d4edd72,
     type: 3}
+  bCubePrefab: {fileID: 6565394694773021799, guid: 50a705a029d282744a2acc0d2aa207c2,
+    type: 3}
+  yCubePrefab: {fileID: 6441177644607278849, guid: 9e022019722dbae4aa6d05f641fbe10d,
+    type: 3}
+  pCubePrefab: {fileID: 2672184114796070155, guid: ecbb87aa289175b4395397dff88a3bdb,
+    type: 3}
+  cubeDist: 2
+  cubeNum: 4
+  cubeCenter: {x: 0, y: 0, z: 0}
 --- !u!1 &2134626922
 GameObject:
   m_ObjectHideFlags: 0
