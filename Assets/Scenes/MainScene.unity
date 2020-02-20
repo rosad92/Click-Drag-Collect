@@ -224,6 +224,8 @@ MonoBehaviour:
     type: 3}
   pCubePrefab: {fileID: 2672184114796070155, guid: ecbb87aa289175b4395397dff88a3bdb,
     type: 3}
+  placementPrefab: {fileID: 3326899766752519384, guid: 8a6b825155165044fa9f050068f9782e,
+    type: 3}
   cubeDist: 2
   cubeNum: 4
   cubeCenter: {x: 0, y: 0, z: 0}

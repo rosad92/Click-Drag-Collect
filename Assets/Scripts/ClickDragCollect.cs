@@ -8,28 +8,36 @@ public class ClickDragCollect : MonoBehaviour{
     public GameObject bCubePrefab;
     public GameObject yCubePrefab;
     public GameObject pCubePrefab;
+    public GameObject placementPrefab;
     public float cubeDist;
     public int cubeNum;
     public Vector3 cubeCenter;
     void Awake() {
         Invoke("dropCubes", 2f);
+        for (int i = 0; i < cubeNum; i++) {
+            GameObject cube = Instantiate<GameObject>(placementPrefab);
+            Vector3 cubePos = Vector3.zero;
+            cubePos.y = -6;
+            cubePos.z = 0.5f;
+            cubePos.x = ((i + 1) / 2) * cubeDist;
+            if (i % 2 == 1) {
+                cubePos.x = -cubePos.x;
+            }
+            cube.transform.position = cubePos;
+        }
     }
-
     void dropCubes() {
-        GameObject rCube = Instantiate<GameObject>(rCubePrefab);
-        rCube.transform.position = new Vector3(1, 6, 0);
-        GameObject bCube = Instantiate<GameObject>(bCubePrefab);
-        bCube.transform.position = new Vector3(-1, 6, 0);
-        GameObject yCube = Instantiate<GameObject>(yCubePrefab);
-        yCube.transform.position = new Vector3(3, 6, 0);
-        GameObject pCube = Instantiate<GameObject>(pCubePrefab);
-        pCube.transform.position = new Vector3(-3, 6, 0);
+        List<GameObject> cubes = new List<GameObject>();
+        cubes.Add(rCubePrefab);
+        cubes.Add(bCubePrefab);
+        cubes.Add(yCubePrefab);
+        cubes.Add(pCubePrefab);
 
 
-        /* for (int i = 0; i<cubeNum; i++) {
 
-
-            GameObject cube = Instantiate<GameObject>(rCubePrefab);
+        for (int i = 0; i< cubeNum; i++) {
+            int randCube = Random.Range(0, cubes.Count);
+            GameObject cube = Instantiate<GameObject>(cubes[randCube]);
             Vector3 cubePos = Vector3.zero;
             cubePos.y = 6;
             cubePos.x = ((i+1) / 2) * cubeDist;
@@ -37,7 +45,8 @@ public class ClickDragCollect : MonoBehaviour{
                 cubePos.x = -cubePos.x;
             }
             cube.transform.position = cubePos;
-        }*/
+            cubes.RemoveAt(randCube);
+        }
 
 
 
