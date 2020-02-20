@@ -14,6 +14,7 @@ public class CubeFalling : MonoBehaviour{
     void Update() {
        if(this.transform.position.y <(-4)) {
             Destroy(this.gameObject);
+            ClickDragCollect.cubesDestroyed++;
         }
     }
 }

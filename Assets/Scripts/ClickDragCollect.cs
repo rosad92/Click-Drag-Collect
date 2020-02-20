@@ -23,6 +23,7 @@ public class ClickDragCollect : MonoBehaviour{
 
     public static int cubesCollected = 0;
     public int phases = 1;
+    public static int cubesDestroyed = 0;
     void Awake() {
         createPlacement();
         Invoke("dropCubes", 2f);
@@ -36,7 +37,6 @@ public class ClickDragCollect : MonoBehaviour{
             cubePos.z = 0.5f;
             cubePos.x = (i * cubeDist);
             cube.transform.position = cubePos;
-            print(cube.GetComponent<Renderer>().material.color.r);
         }
 
     }
@@ -76,6 +76,9 @@ public class ClickDragCollect : MonoBehaviour{
             NewLevel();
             cubesCollected = 0;
         }
+        if (cubesDestroyed > 0) {
+            LevelFailed();
+        }
     }
 
     void NewLevel() {
@@ -110,5 +113,12 @@ public class ClickDragCollect : MonoBehaviour{
 
 
         Invoke("dropCubes", 1f);
+    }
+    public void LevelFailed() {
+        cubesCollected = 0;
+        cubeNum = 0;
+        phases = 0;
+        cubesDestroyed = 0;
+        NewLevel();
     }
 }
