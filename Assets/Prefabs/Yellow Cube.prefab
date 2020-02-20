@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6441177644607278848}
   - component: {fileID: 4300302701949698781}
   - component: {fileID: -977767171851421147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Yellow Cube
   m_TagString: Yellow
   m_Icon: {fileID: 0}

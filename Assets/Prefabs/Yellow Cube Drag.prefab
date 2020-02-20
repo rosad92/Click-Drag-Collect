@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6441177644607278855}
   - component: {fileID: 6441177644607278848}
   - component: {fileID: -1922386475718915312}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Yellow Cube Drag
   m_TagString: Yellow
   m_Icon: {fileID: 0}

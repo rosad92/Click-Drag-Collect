@@ -20,10 +20,11 @@ public class ClickDragCollect : MonoBehaviour{
         for (int i = 0; i < cubeNum; i++) {
             GameObject cube = Instantiate<GameObject>(placementPrefab);
             Vector3 cubePos = Vector3.zero;
-            cubePos.y = -6;
+            cubePos.y = -4;
             cubePos.z = 0.5f;
             cubePos.x = (i * cubeDist);
             cube.transform.position = cubePos;
+            print(cube.GetComponent<Renderer>().material.color.r);
         }
 
     }

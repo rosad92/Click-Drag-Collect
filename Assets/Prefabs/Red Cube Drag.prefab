@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3784189850603971131}
   - component: {fileID: 3784189850603971130}
   - component: {fileID: 159357741483678966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Red Cube Drag
   m_TagString: Red
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2672184114796070157}
   - component: {fileID: 2672184114796070154}
   - component: {fileID: 4165059672030348879}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Purple Cube Drag
   m_TagString: Purple
   m_Icon: {fileID: 0}
@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398ca7ae73e657842ab05dad2776a250, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drag: 0
