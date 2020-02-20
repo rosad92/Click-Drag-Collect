@@ -7,6 +7,7 @@ public class CubeFalling : MonoBehaviour{
     void OnTriggerEnter(Collider other) {
         if(this.tag == other.tag) {
             Destroy(this.gameObject);
+            ClickDragCollect.cubesCollected++;
         }
     }
 

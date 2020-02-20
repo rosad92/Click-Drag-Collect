@@ -8,6 +8,7 @@ TagManager:
   - Red
   - Yellow
   - Purple
+  - Placement
   layers:
   - Default
   - TransparentFX
